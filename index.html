@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html ng-app="">
+<html ng-app="dumbStuff">
   <head>
     <meta charset="utf-8">
     <title></title>
-  </head>
-  <body>
-    <cust-dir></cust-dir>
+    <style>
+    body {
+      display:flex;
+      flex-direction: column;
+    }
 
-  <script scr="app.js"></script>
-  <script scr="mainCtrl.js"></script>
-  <script scr="mainSrvc.js"></script>
-  <script scr="./custDir/custDir.js"></script>
-  <script scr="./custDir/custDirCtrl.js"></script>
-  <script scr="./custDir/custDir.js"></script>
+    </style>
+  </head>
+  <body ng-controller="mainCtrl">
+
+
+  <cust-dir lesson="lesson"  ng-repeat="lesson in lessons" day-alert="announceDay(lesson, day)"></cust-dir>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="./app.js"></script>
+  <script src="./mainCtrl.js"></script>
+  <script src="./services/mainSrvc.js"></script>
+  <script src="./custDir/custDir.js"></script>
+  <script src="./custDir/custDirCtrl.js"></script>
   </body>
 </html>

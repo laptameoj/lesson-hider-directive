@@ -1,11 +1,14 @@
 (function() {
   'use strict';
 
-  angular.module('directivePractice', [])
-    .controller('custDirCtrl', custDirCtrl);
+  angular.module('dumbStuff')
+    .controller('custDirCtrl', function ($scope, mainSrvc){
+      $scope.directiveController = 'directiveController';
 
-    function custDirCtrl(){
 
-    }
-    
+      $scope.getData = mainSrvc.getData();
+
+
+    });
+
 }());

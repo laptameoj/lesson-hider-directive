@@ -1,4 +1,4 @@
-(function() {
-  'use strict';
-  angular.module('directivePractice', []);
-}());
+// (function() {
+//   'use strict';
+  angular.module('dumbStuff', []);
+// }());
